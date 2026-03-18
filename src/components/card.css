@@ -1,0 +1,26 @@
+.card {
+        border: "1px solid #ddd5db";
+        border-Radius: "12px";
+        padding: "1.5rem";
+        margin: "2rem auto";
+        max-Width: "400px";
+        box-Shadow: "0 4px 12px rgba(0,0,0,0.15)";
+        text-Align: "center";
+    }
+.imagen {
+        width: "100%";
+        max-Height: "300px";
+        object-Fit: "cover";
+        border-Radius: "10px";
+        margin-Bottom: "1rem";
+    }
+.nombre {
+        font-Size: 50px;
+        color:rgb(21, 85, 203);
+        margin-Bottom: "0.5rem";
+    }
+.info {
+        font-Size: 30px;
+        color:rgb(21, 85, 203);
+        margin-Bottom: "0.5rem";
+    }
