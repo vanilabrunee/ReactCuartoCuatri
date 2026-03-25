@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Card from "./card.tsx";
 import "./main.css";
 
@@ -21,13 +21,14 @@ function main() {
 
   const API_KEY = "gaaDiAVieV66SWw6J5zxyHi9LCTplYpCDMxnxQs9";  //clave que me pide la API
 
-    const traerPerrito = async () => {
-    setCargando(true);
-    setError("");
+    const traerPerrito = async (nombreBusqueda: string = raza) => {
+        if (!nombreBusqueda) return;
+        setCargando(true);
+        setError("");
 
     try {
         const respuesta = await fetch(
-        `https://api.api-ninjas.com/v1/dogs?name=${raza}`,
+        `https://api.api-ninjas.com/v1/dogs?name=${nombreBusqueda}`,
         {
             headers: {
             "X-Api-Key" : API_KEY
@@ -48,7 +49,9 @@ function main() {
         setCargando(false);
     }
     };
-
+    useEffect(() => {
+        traerPerrito("husky");
+    }, []);       
         
 
     return (
@@ -67,7 +70,7 @@ function main() {
         />
 
         <button className='boton'
-        onClick={traerPerrito}
+        onClick={() => traerPerrito()}
         disabled={cargando}
         >
         {cargando ? "Buscando..." : "Mostrar Perrito"}
