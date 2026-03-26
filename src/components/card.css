@@ -1,26 +1,56 @@
-.card {
-        border: "1px solid #ddd5db";
-        border-Radius: "12px";
-        padding: "1.5rem";
-        margin: "2rem auto";
-        max-Width: "400px";
-        box-Shadow: "0 4px 12px rgba(0,0,0,0.15)";
-        text-Align: "center";
+    .card {
+    display: flex;
+    flex-direction: column; /* Apila elementos hacia abajo */
+    background-color: white;
+    border-radius: 20px; /* Bordes suaves */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15); /* Sombra elegante */
+    overflow: hidden;
+    max-height: 80vh; /* Para evitar que se desborde si la foto es muy grande */
+
+    /* AGRANDAMOS LA TARJETA MUCHO MÁS */
+    max-width: 700px; /* Un ancho imponente pero controlado */
+    width: 90%; /* Para que en móviles se adapte */
+
+    margin: 3rem auto; /* Centrada y con espacio arriba/abajo */
+    transition: all 0.3s ease;
     }
-.imagen {
-        width: "100%";
-        max-Height: "300px";
-        object-Fit: "cover";
-        border-Radius: "10px";
-        margin-Bottom: "1rem";
+    .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.2);
     }
-.nombre {
-        font-Size: 50px;
-        color:rgb(21, 85, 203);
-        margin-Bottom: "0.5rem";
+    .imagen {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9; /* Un fondo sutil para la foto */
+    padding: 1rem 0;
+    width: auto;
+    max-width: 90%; /* La foto ocupa casi todo el ancho */
+    height: 300px; /* Forzamos una buena altura */
+    object-fit: contain; /* Muestra la foto entera sin cortarla */
+    display: block;
     }
-.info {
-        font-Size: 30px;
-        color:rgb(21, 85, 203);
-        margin-Bottom: "0.5rem";
+    .nombre {
+    font-size: 3.5rem; /* ¡Muy grande! */
+    color: #2c3e50;
+    text-align: center;
+    margin: 1.5rem 0;
+    padding: 0 1rem;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 1rem;
+    }
+    .info {
+    width: 100%;
+    list-style: none;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 1.4rem; /* Texto grande y legible */
+    color: #444;
+    margin-bottom: 25px; /* Mucho espacio entre renglones */
+    display: flex; /* Para separar etiqueta del valor */
+    justify-content: space-between;
+    border-bottom: 1px solid #eee; /* Una línea divisoria suave */
+    padding-bottom: 10px;
     }

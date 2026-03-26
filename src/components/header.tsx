@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
+import "./header.css";  
 
 function Header() {
     return (
     <header className="header-nav">
         <nav>
-        <ul style={{ display: "flex", gap: "20px", listStyle: "none", justifyContent: "center" }}>
+        <ul>
             <li>
             <Link to="/">Buscador</Link>
             </li>
