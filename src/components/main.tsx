@@ -60,7 +60,7 @@ function main() {
 
     <input className='input'
         type="text"
-        placeholder="Nombre de la raza (ej: husky, labrador)"
+        placeholder="Nombre de la raza "
         value={raza}
         onChange={(e) => setRaza(e.target.value)}
         disabled={cargando}
